@@ -1,0 +1,12 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+    <div class="assignment-detail">
+        <div class="assignment">
+            <img src="{{ assignment.thumb.url }}">
+            <h2>{{ assignment.title }}</h2>
+            <p>{{ assignment.body }}</p>
+            <p>{{ assignment.date }}</p>
+        </div>
+    </div>
+{% endblock %}

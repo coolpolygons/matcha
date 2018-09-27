@@ -1,0 +1,15 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+    <h1>Assignment List</h1>
+    <div class="assignments">
+        {% for assignment in assignments %}
+            <div class="assignment">
+                <h2><a href="{% url 'assignments:detail' slug=assignment.slug %}">{{ assignment.title }}</a></h2>
+                <p>{{ assignment.snippet }}</p>
+                <p>{{ assignment.date }}</p>
+                <p class="author">added by {{ assignment.author }}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
